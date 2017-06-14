@@ -19,7 +19,7 @@ int instruction(char* str);
 
 void command_list(FILE* file);
 void command_quit();
-void command_run();
-void command_line();
+void command_run(FILE* file);
+void command_line(FILE* file, char* str);
 
 #endif

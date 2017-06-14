@@ -7,9 +7,7 @@
 
 int main(int argc, char* argv[])
 {
-	yyparse();
-	
-	FILE *yyin = fopen(argv[1],"r");
+	yyin = fopen(argv[1],"r");
 	char str[10];
 
 	while(yyin!=NULL && strcmp(str,"QUIT"))
@@ -21,7 +19,7 @@ int main(int argc, char* argv[])
 		switch(instruction(str))
 		{
 			case 0:	command_list(yyin);		break;
-			case 1: command_run();			break;
+			case 1: command_run(yyin);			break;
 			case 2:	command_quit();			break;
 			case 3:	command_line(yyin, str);	break;
 			default: printf("wrong command\n");
@@ -29,3 +27,6 @@ int main(int argc, char* argv[])
 	}
 	fclose(yyin);
 }
+
+
+

@@ -17,7 +17,10 @@ digit [0-9]
  
 %%
  
-{digit}+	{return DIGIT;} 
+{digit}+	{
+	yylval = atoi(yytext);
+	return DIGIT;
+} 
 
  
 "="     return EQUAL;
@@ -37,3 +40,4 @@ digit [0-9]
 	
 .	{}
 
+%%

@@ -21,17 +21,7 @@
  
 %%
  
-line    : expr '\n'		 {printf("%d\n", $1);} 
-	| expr			 {printf("to%d\n", $$);}
-	;
-expr    : expr '+' term 	 {$$ = $1 + $3;} 
-	| term			 {printf("to\n");}	 
-	;
-term    : term '*' factor      	 {$$ = $1 * $3;} 
-	| factor		 {printf("to\n");}
-	; 
-factor  : '(' expr ')' 		 {$$ = $2 ;} 
-	| DIGIT			 {$$ = $1 ; printf("to\n");} 
+factor  : DIGIT			 {$$ = $1 ; printf("%d\n", $1); }
 	; 
 
  

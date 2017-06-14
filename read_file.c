@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+
 #include "read_file.h"
+#include "Parser.h"
+#include "Lexer.h"
 
 void reset_file(FILE* file)
 {
@@ -59,10 +62,11 @@ void command_quit()
 	exit(0);
 }
 
-void command_run()
+void command_run(FILE* yyin)
 {
 	printf("INPUT : RUN\n");
 	yyparse();
+	reset_file(yyin);
 }
 
 void command_line(FILE* yyin, char* str)
