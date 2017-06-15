@@ -1,6 +1,6 @@
 # Makefile
 
-FILES	= Lexer.c Parser.c read_file.c main.c parser.c linkedList.c table.c
+FILES	= Lexer.c Parser.c read_file.c main.c parser.c ast.c
 CC	= gcc
 CFLAGS	= -g 
 

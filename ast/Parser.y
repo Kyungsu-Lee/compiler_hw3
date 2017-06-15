@@ -2,7 +2,6 @@
 
 #include "read_file.h"
 #include "parser.h"
-#include "Parser.h"
 #include "Lexer.h"
 #include <string.h>
 
@@ -101,8 +100,10 @@ yyerror(char const*s)
 	printf("Syntax Error in line number : %d : %s %s \n",yylineno,s,yytext);
 }
 
-
-
+yylex()
+{
+	return "a";
+}
 
 
 

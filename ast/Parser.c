@@ -67,13 +67,12 @@
 
 #include "read_file.h"
 #include "parser.h"
-#include "Parser.h"
 #include "Lexer.h"
 #include <string.h>
 
 extern FILE * yyin;
 
-#line 77 "Parser.c" /* yacc.c:339  */
+#line 76 "Parser.c" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -142,12 +141,12 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 16 "Parser.y" /* yacc.c:355  */
+#line 15 "Parser.y" /* yacc.c:355  */
 
 	char strval[40];
 	int intval;
 
-#line 151 "Parser.c" /* yacc.c:355  */
+#line 150 "Parser.c" /* yacc.c:355  */
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -164,7 +163,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 168 "Parser.c" /* yacc.c:358  */
+#line 167 "Parser.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -464,10 +463,10 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    41,    41,    42,    45,    46,    49,    50,    51,    52,
-      53,    54,    55,    56,    59,    66,    67,    68,    69,    70,
-      71,    72,    74,    76,    78,    80,    82,    84,    86,    88,
-      90,    92,    94
+       0,    40,    40,    41,    44,    45,    48,    49,    50,    51,
+      52,    53,    54,    55,    58,    65,    66,    67,    68,    69,
+      70,    71,    73,    75,    77,    79,    81,    83,    85,    87,
+      89,    91,    93
 };
 #endif
 
@@ -1294,170 +1293,170 @@ yyreduce:
   switch (yyn)
     {
         case 6:
-#line 49 "Parser.y" /* yacc.c:1646  */
+#line 48 "Parser.y" /* yacc.c:1646  */
     {}
-#line 1300 "Parser.c" /* yacc.c:1646  */
+#line 1299 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 8:
-#line 51 "Parser.y" /* yacc.c:1646  */
+#line 50 "Parser.y" /* yacc.c:1646  */
     {declare((yyvsp[-2].strval),(yyvsp[0].intval));}
-#line 1306 "Parser.c" /* yacc.c:1646  */
+#line 1305 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 9:
-#line 52 "Parser.y" /* yacc.c:1646  */
+#line 51 "Parser.y" /* yacc.c:1646  */
     {}
-#line 1312 "Parser.c" /* yacc.c:1646  */
+#line 1311 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 11:
-#line 54 "Parser.y" /* yacc.c:1646  */
+#line 53 "Parser.y" /* yacc.c:1646  */
     {printf("%s\n", (yyvsp[-1].strval));}
-#line 1318 "Parser.c" /* yacc.c:1646  */
+#line 1317 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 12:
-#line 55 "Parser.y" /* yacc.c:1646  */
+#line 54 "Parser.y" /* yacc.c:1646  */
     {printf("%d\n",find((yyvsp[0].strval)));}
-#line 1324 "Parser.c" /* yacc.c:1646  */
+#line 1323 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 13:
-#line 56 "Parser.y" /* yacc.c:1646  */
+#line 55 "Parser.y" /* yacc.c:1646  */
     {
 												 input(); declare2((yyvsp[0].strval));
 												}
-#line 1332 "Parser.c" /* yacc.c:1646  */
+#line 1331 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 14:
-#line 59 "Parser.y" /* yacc.c:1646  */
+#line 58 "Parser.y" /* yacc.c:1646  */
     {
 												if((yyvsp[-2].intval)==1) printf("TRUE CONDITION\n");
 												else printf("FALSE CONDITION\n");
 												}
-#line 1341 "Parser.c" /* yacc.c:1646  */
+#line 1340 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 15:
-#line 66 "Parser.y" /* yacc.c:1646  */
+#line 65 "Parser.y" /* yacc.c:1646  */
     {(yyval.intval) = (yyvsp[0].intval);}
-#line 1347 "Parser.c" /* yacc.c:1646  */
+#line 1346 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 16:
-#line 67 "Parser.y" /* yacc.c:1646  */
+#line 66 "Parser.y" /* yacc.c:1646  */
     {(yyval.intval) = find((yyvsp[0].strval));}
-#line 1353 "Parser.c" /* yacc.c:1646  */
+#line 1352 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 17:
-#line 68 "Parser.y" /* yacc.c:1646  */
+#line 67 "Parser.y" /* yacc.c:1646  */
     {(yyval.intval) = (yyvsp[-2].intval) - (yyvsp[0].intval);}
-#line 1359 "Parser.c" /* yacc.c:1646  */
+#line 1358 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 18:
-#line 69 "Parser.y" /* yacc.c:1646  */
+#line 68 "Parser.y" /* yacc.c:1646  */
     {(yyval.intval) = (yyvsp[-2].intval) + (yyvsp[0].intval);}
-#line 1365 "Parser.c" /* yacc.c:1646  */
+#line 1364 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 19:
-#line 70 "Parser.y" /* yacc.c:1646  */
+#line 69 "Parser.y" /* yacc.c:1646  */
     {(yyval.intval) = (yyvsp[-2].intval) * (yyvsp[0].intval);}
-#line 1371 "Parser.c" /* yacc.c:1646  */
+#line 1370 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 20:
-#line 71 "Parser.y" /* yacc.c:1646  */
+#line 70 "Parser.y" /* yacc.c:1646  */
     {(yyval.intval) = (yyvsp[-2].intval) / (yyvsp[0].intval);}
-#line 1377 "Parser.c" /* yacc.c:1646  */
+#line 1376 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 21:
-#line 72 "Parser.y" /* yacc.c:1646  */
+#line 71 "Parser.y" /* yacc.c:1646  */
     {(yyval.intval) = (yyvsp[-2].intval) % (yyvsp[0].intval);}
-#line 1383 "Parser.c" /* yacc.c:1646  */
+#line 1382 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 22:
-#line 74 "Parser.y" /* yacc.c:1646  */
+#line 73 "Parser.y" /* yacc.c:1646  */
     {if((yyvsp[-2].intval)==(yyvsp[0].intval))	(yyval.intval) = 1; 
 											else (yyval.intval)= 0;}
-#line 1390 "Parser.c" /* yacc.c:1646  */
+#line 1389 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 23:
-#line 76 "Parser.y" /* yacc.c:1646  */
+#line 75 "Parser.y" /* yacc.c:1646  */
     {if((yyvsp[-2].intval)!=(yyvsp[0].intval)) (yyval.intval) = 1;
 											else (yyval.intval) = 0;}
-#line 1397 "Parser.c" /* yacc.c:1646  */
+#line 1396 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 24:
-#line 78 "Parser.y" /* yacc.c:1646  */
+#line 77 "Parser.y" /* yacc.c:1646  */
     {if((yyvsp[-2].intval)<=(yyvsp[0].intval)) (yyval.intval) = 1;
 											else (yyval.intval) = 0; }
-#line 1404 "Parser.c" /* yacc.c:1646  */
+#line 1403 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 25:
-#line 80 "Parser.y" /* yacc.c:1646  */
+#line 79 "Parser.y" /* yacc.c:1646  */
     {if((yyvsp[-2].intval)>=(yyvsp[0].intval)) (yyval.intval) = 1;
 											else (yyval.intval) = 0; }
-#line 1411 "Parser.c" /* yacc.c:1646  */
+#line 1410 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 26:
-#line 82 "Parser.y" /* yacc.c:1646  */
+#line 81 "Parser.y" /* yacc.c:1646  */
     {if((yyvsp[-2].intval)>(yyvsp[0].intval)) (yyval.intval) = 1;
 											else (yyval.intval) = 0; }
-#line 1418 "Parser.c" /* yacc.c:1646  */
+#line 1417 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 27:
-#line 84 "Parser.y" /* yacc.c:1646  */
+#line 83 "Parser.y" /* yacc.c:1646  */
     {if((yyvsp[-2].intval)<(yyvsp[0].intval)) (yyval.intval) = 1;
 											else (yyval.intval) = 0; }
-#line 1425 "Parser.c" /* yacc.c:1646  */
+#line 1424 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 28:
-#line 86 "Parser.y" /* yacc.c:1646  */
+#line 85 "Parser.y" /* yacc.c:1646  */
     {if((yyvsp[-2].intval)==1&&(yyvsp[0].intval)==1) (yyval.intval) = 1;
 											else (yyval.intval) = 0; }
-#line 1432 "Parser.c" /* yacc.c:1646  */
+#line 1431 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 29:
-#line 88 "Parser.y" /* yacc.c:1646  */
+#line 87 "Parser.y" /* yacc.c:1646  */
     {if((yyvsp[-2].intval)==1||(yyvsp[0].intval)==1) (yyval.intval) = 1;
 											else (yyval.intval) = 0; }
-#line 1439 "Parser.c" /* yacc.c:1646  */
+#line 1438 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 30:
-#line 90 "Parser.y" /* yacc.c:1646  */
+#line 89 "Parser.y" /* yacc.c:1646  */
     {(yyval.intval) = -(yyvsp[0].intval);}
-#line 1445 "Parser.c" /* yacc.c:1646  */
+#line 1444 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 31:
-#line 92 "Parser.y" /* yacc.c:1646  */
+#line 91 "Parser.y" /* yacc.c:1646  */
     {(yyval.intval) = !(yyvsp[0].intval);}
-#line 1451 "Parser.c" /* yacc.c:1646  */
+#line 1450 "Parser.c" /* yacc.c:1646  */
     break;
 
   case 32:
-#line 94 "Parser.y" /* yacc.c:1646  */
+#line 93 "Parser.y" /* yacc.c:1646  */
     {(yyval.intval)=(yyvsp[-1].intval);}
-#line 1457 "Parser.c" /* yacc.c:1646  */
+#line 1456 "Parser.c" /* yacc.c:1646  */
     break;
 
 
-#line 1461 "Parser.c" /* yacc.c:1646  */
+#line 1460 "Parser.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1685,15 +1684,17 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 98 "Parser.y" /* yacc.c:1906  */
+#line 97 "Parser.y" /* yacc.c:1906  */
 
 yyerror(char const*s)
 {
 	printf("Syntax Error in line number : %d : %s %s \n",yylineno,s,yytext);
 }
 
-
-
+yylex()
+{
+	return "a";
+}
 
 
 
