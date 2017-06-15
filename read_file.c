@@ -64,8 +64,11 @@ void command_quit()
 
 void command_run(FILE* yyin)
 {
-	printf("INPUT : RUN\n");
-	yyparse();
+//	printf("INPUT : RUN\n");
+	if(!yyparse())
+	{
+		printf("parsing complete!\n");
+	}
 	reset_file(yyin);
 }
 

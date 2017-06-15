@@ -1,3 +1,4 @@
+
 5 REM inputtig the argument
 10 PRINT " factorial of: "
 20 INPUT A
